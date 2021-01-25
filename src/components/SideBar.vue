@@ -16,16 +16,22 @@
                     <v-app-bar-nav-icon v-on:click="tDrawer"></v-app-bar-nav-icon>
                 </v-btn>
             <div class="mt-25">
+                <router-link to="/Dashboard">
                 <v-btn icon >
                     <span class="material-icons size-30">
                     trending_up
                     </span>
                 </v-btn>
+                </router-link>
+
+                <router-link to="/Mytasks">
                 <v-btn icon>
                     <span class="material-icons size-30">
                     fact_check
                     </span>
                 </v-btn>
+                </router-link>
+
                 <v-btn icon>
                     <span class="material-icons size-35">
                     settings_applications
@@ -53,16 +59,21 @@
             </v-col>
         </v-navigation-drawer>
     <v-main>
-        
     </v-main>
   </v-card>  
 </template>
 
 <script>
 export default {   
+    data:()=>({
+        drawer:true
+
+    })
+    ,
     
     methods:{tDrawer(){
-        console.log("side")
+        console.log(this.drawer)
+        this.drawer=!this.drawer
     }}
 }
 </script>

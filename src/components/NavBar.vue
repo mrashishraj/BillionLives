@@ -62,8 +62,10 @@
         >
         </v-avatar>
     </v-toolbar>
+    <v-main>
+    <SideBar/> 
+    </v-main>
   </v-card> 
-  <SideBar drawerValue="drawer"/> 
     
   </div>
 </template>
@@ -191,6 +193,8 @@ import SideBar from "./SideBar"
     font-size: 10px;    
     font-weight: 600;  
     color: #4C4C4C; 
+    position: fixed;
+    top: 80;
 }
 
 </style>
